@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HamburgerMenu.HamburgerMenu">
+    <MasterDetailPage.Master>
+        <ContentPage
+            Title="Menú"
+            BackgroundColor="#5e5a5a"
+            Padding="0,40,0,0">
+            <Label Text="My menu"/>
+            <ListView BackgroundColor="White" x:Name="ListMenu" ItemSelected="ListMenu_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell TextColor="Black" DetailColor="Black" Height="25" 
+                                   Text="{Binding MenuTitle}"
+                                   Detail="{Binding MenuDetail}"
+                                   ImageSource="{Binding icon}">
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>
